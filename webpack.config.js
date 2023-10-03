@@ -6,9 +6,10 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
     library: {
-      name: "bubble-gum",
+      name: "gumtoaster",
       type: "umd",
     },
+    libraryTarget: "umd",
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],

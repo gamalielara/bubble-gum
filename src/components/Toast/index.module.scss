@@ -1,5 +1,8 @@
 .toast-wrapper {
-  width: 10px;
-  height: 10px;
+  width: 200px;
+  padding: 10px;
   background-color: rgb(116, 33, 33);
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
 }
