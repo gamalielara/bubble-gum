@@ -4,16 +4,18 @@ import {ToastContext} from "../ToastProvider";
 import ToastBox from "../ToastBox";
 
 const ToastShelf: React.FC = () => {
-    const {toasts} = useContext(ToastContext);
+    const context = useContext(ToastContext);
 
     return (
-        <ul className={styles.toastShelf}>
-            {toasts.map((toast) => (
-                <li>
-                    <ToastBox>{toast.message}</ToastBox>
-                </li>
-            ))}
-        </ul>
+        <aside className={styles["toast-shelf-container"]}>
+            <ul className={styles["toast-shelf"]}>
+                {context?.toasts.map((toast) => (
+                    <li>
+                        <ToastBox>{toast.message}</ToastBox>
+                    </li>
+                ))}
+            </ul>
+        </aside>
     )
 }
 

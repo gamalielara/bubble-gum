@@ -1,17 +1,34 @@
-import {useContext} from "react";
+import {useContext, useEffect, useState} from "react";
 import {ToastContext} from "../components/ToastProvider";
 import {ToastVariant} from "../types/interface";
 
-export const addSuccessToast = (message: string) => {
-    const {setToasts} = useContext(ToastContext);
+export  default () => {
+    const [successToastCallback, setSuccessToastCallback] = useState<(...args: any[]) => void>();
 
-    const newToast = {
-        variant: ToastVariant.SUCCESS,
-        message
+    const context = useContext(ToastContext);
+
+    console.log("CONTEXT ", context)
+
+    useEffect(() => {
+        if(!context) return;
+
+        const {setToasts} = context;
+
+        const addSuccessToaster = (message: string) => {
+            const newToast = {
+                variant: ToastVariant.SUCCESS,
+                message
+            }
+
+            setToasts(state => [...state, newToast ])
+        }
+
+        setSuccessToastCallback(() => addSuccessToaster)
+    }, []);
+
+    return {
+        addSuccessToaster: successToastCallback,
     }
 
-    setToasts(state => [...state, newToast]);
 }
-
-export default {addSuccessToast}
 

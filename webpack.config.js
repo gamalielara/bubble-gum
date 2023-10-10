@@ -14,7 +14,7 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
-  devtool: "eval",
+  devtool: "source-map",
   module: {
     rules: [
       {
@@ -35,4 +35,5 @@ module.exports = {
       },
     ],
   },
+  externals: {react: 'react'}
 };
