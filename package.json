@@ -1,11 +1,17 @@
 {
   "name": "gumtoaster",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A React toast and modal library component",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "files": [
+    "lib",
+    "package.json",
+    "README.md"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf dist/ && webpack --mode production",
+    "build": "rm -rf lib/ && webpack --mode production",
     "dev": "webpack --mode production --watch"
   },
   "repository": {

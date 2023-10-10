@@ -1,0 +1,29 @@
+.toast-wrapper {
+  width: 200px;
+  padding: 10px;
+  background-color: rgb(27, 171, 53);
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  border-radius: 10px;
+  min-height: 1rem;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  box-shadow: 10px 9px 26px -8px rgba(0,0,0,0.64);
+  -webkit-box-shadow: 10px 9px 26px -8px rgba(0,0,0,0.64);
+  -moz-box-shadow: 10px 9px 26px -8px rgba(0,0,0,0.64);
+}
+
+.close-btn{
+  all: unset;
+  color: white;
+  background-color: rgb(14, 124, 34);
+  width: 1.5rem;
+  height: 1.5rem;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
